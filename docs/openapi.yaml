@@ -27,7 +27,7 @@ paths:
         default:
           description: Unexpected Error
           schema:
-            $ref: '#/translate/Error'
+            $ref: '#/definitions/Error'
 
   /syrup:
     get:
@@ -43,7 +43,7 @@ paths:
         default:
           description: Unexpected Error
           schema:
-            $ref: "#/syrup/Error"
+            $ref: '#/definitions/Error'
   /poutine:
     get:
       summary: Get your free poutine!
@@ -58,7 +58,7 @@ paths:
         default:
           description: Unexpected Error
           schema:
-            $ref: '#/poutine/Error'
+            $ref: '#/definitions/Error'
 
   /hello:
     get:
@@ -74,7 +74,7 @@ paths:
         default:
           description: Unexpected Error
           schema:
-            $ref: '#/poutine/Error'
+            $ref: '#/definitions/Error'
       
   /trivia:
     get:
@@ -91,7 +91,7 @@ paths:
           default:
             description: Unexpected Error
             schema:
-              $ref: "#/trivia/Error"
+              $ref: '#/definitions/Error'
   
   /healthcare:    
     get:
@@ -105,7 +105,7 @@ paths:
         default:
           description: Unexpected Error
           schema:
-            $ref: "#/trivia/Error"
+            $ref: '#/definitions/Error'
 
 definitions:
   Error:
@@ -115,5 +115,3 @@ definitions:
         format: int32
       message:
         type: string
-  
-  
