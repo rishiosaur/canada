@@ -1,6 +1,6 @@
 ## Introduction
 
-This repo is a **barebone minimalistic** starter-kit for TypeScript-based ExpressJS (https://expressjs.com/) app.
+This is a stupid little API for sourcing canada-related things. 
 
 ## Simplicity
 
