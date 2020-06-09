@@ -1,0 +1,113 @@
+swagger: '2.0'
+info:
+  title: The Canadian API
+  version: '1.0'
+host: api.server.test
+schemes:
+  - https
+basePath: /
+paths:
+  /translate:
+    get:
+      summary: Canadian English Translator
+      description: Translates English into Canadian
+      parameters:
+        - name: text
+          in: query
+          description: Text to translate
+          required: true
+          type: string
+      tags:
+        - Translation
+      responses:
+        "200":
+          description: The translated string
+          schema:
+            type: string
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: '#/translate/Error'
+
+  /syrup:
+    get:
+      summary: Syrup Images!
+      description: Returns ASCII art of a syrup bottle!
+      tags:
+        - Food
+      responses:
+        200:
+          description: The ASCII art
+          schema:
+            type: string
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: "#/syrup/Error"
+  /poutine:
+    get:
+      summary: Get your free poutine!
+      description: Returns a poutine flavour.
+      tags:
+        - Food
+      responses:
+        "200":
+          description: Poutine flavour
+          schema:
+            type: string
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: '#/poutine/Error'
+
+  /hello:
+    get:
+      summary: Generate a truely Canadian greeting.
+      description: Returns a greeting message.
+      tags:
+        - Translation
+      responses:
+        "200":
+          description: Greeting string
+          schema:
+            type: string
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: '#/poutine/Error'
+      
+  /trivia:
+    get:
+        summary: Get your facts here!
+        description: Returns a quick piece of trivia about Canada.
+        tags:
+          - Knowledge
+          - trivia
+        responses:
+          200:
+            description: Returns a fact about Canada
+            schema:
+              type: string
+          default:
+            description: Unexpected Error
+            schema:
+              $ref: "#/trivia/Error"
+  
+  /healthcare:    
+    get:
+      summary: Get your cost of healthcare here!
+      description: Returns the total cost of healthcare in Canada in CAD
+      responses:
+        200:
+          description: Returns the total cost of healthcare here in Canada.
+          schema:
+            type: number
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: "#/trivia/Error"
+
+definitions:
+    
+  
+  
